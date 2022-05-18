@@ -11,5 +11,7 @@ let g:loaded_barbell = 1
 
 " Exposes the plugin's functions for use as commands in Vim.
 " command! -nargs=0 PostJson call barbell#PostJson()
+command! -nargs=* MakeRequest call barbell#MakeRequest(<f-args>)
 command! -range PostJson <line1>,<line2>call barbell#PostJson()
+command! -nargs=0 GetJson call barbell#GetJson()
 
